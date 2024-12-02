@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  @font-face {
+    font-family: "hornsea";
+    src: url(/fonts/hornsea_fc_regular-webfont.woff2);
+    src: local('hornsea'), url("/fonts/hornsea_fc_regular-webfont.woff2") format('woff'), url('/fonts/hornsea_fc_regular-webfont.woff') format('truetype');
+    font-style: normal;
+  }
+  body{
+    height: 100vh;
+    width: 100vw;
+    /* background: linear-gradient(45deg,#04619F,#000000); */
+    color: #fff;
+    background-color: #ddd;
+    overflow-x: hidden;
+  } 
+  .container{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 100px;
+  }
+  .content-section{
+    float: left;
+    width: 55%;
+  }
+  .image-section{
+    float: right;
+    width: 40%;
+  }
+  .image-section img{
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 .5rem black);
+     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  } 
+  .content-section .title{
+    font-size: 4rem;
+    font-family: "hornsea";
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #8b9b9e, #0e1538, #0e1538, #8b9b9e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .content-section h3{
+    margin: 5px auto 10px auto;
+    color: #0e1538;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 1.4px #0e1538;
+  }
+  .content{
+    padding: 50px;
+  }
+   ul {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  li {
+    font-size: 1.3rem;
+    line-height: 1.2;
+    display: block;
+    list-style: none;
+    text-transform: capitalize;
+    
+  }
+  .grid-container p{
+    font-size: 1.3rem;
+  }
+  .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 17px;
+    margin-top: 16px;
+    gap: 1rem;
+  }
+  .link{
+    padding: 20px;
+  }
+  .homebtn{
+    text-decoration: none;
+    font-family: "Montserrat";
+    font-size: 1rem;
+    text-shadow: 2px 2px 4px #000000;
+    display: inline-block; 
+  }
+  .homebtn:link{
+    color: #0e1538;
+  }

@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  @font-face {
+    font-family: "hornsea";
+    src: url(/fonts/hornsea_fc_regular-webfont.woff2);
+    src: local('hornsea'), url("/fonts/hornsea_fc_regular-webfont.woff2") format('woff'), url('/fonts/hornsea_fc_regular-webfont.woff') format('truetype');
+    font-style: normal;
+  }
+  body{
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: #ddd;
+    background-color: #ddd;
+  }
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100vw;
+  }
+  header h1{
+    font-size: 10rem;
+    font-family: "hornsea";
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #8b9b9e, #0e1538, #0e1538, #8b9b9e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  p{
+    line-height: 1.4;
+    font-size: 1rem;
+    margin: 5px 0 0 0;
+    font-weight: bold;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  header p{
+    margin-top: 40px;
+  }
+  .slide1,
+  .slide2,
+  .slide3{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+  .slide1{
+    background-image: url(https://t4.ftcdn.net/jpg/04/52/93/49/240_F_452934931_bGlXLhU6zcsxwHhLC98VJ9vbgYKBViUi.jpg);
+  }
+  .slide2{
+    background-image: url(https://t4.ftcdn.net/jpg/04/75/18/95/240_F_475189548_38v3QhLwUDpKEFPxcvMW8oLPRzHkngUs.jpg);
+  }
+  .slide3{
+    background-image: url(https://images.unsplash.com/photo-1615613806836-f6b3f75d1005?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njl8fHZpbnlsJTIwcmVjb3JkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60);
+  }
+  .container{
+    padding: 2rem;
+  }
+  .slider-wrapper{
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+    overflow: hidden;
+    filter: drop-shadow(0 0 .5rem black);
+  }
+  .slider{
+    display: flex;
+    flex-direction: row;
+    aspect-ratio: 16 / 9;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    border-radius: 0.5rem;
+  }
+  /* hides the scrollbar */
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
+  .slider div{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+  }
+  form{
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .input-search{
+    height: 50px;
+    width: 50px;
+    background: linear-gradient(145deg, #515b5e, #0e1538, #0e1538, #0e1f23);
+    border-style: none;
+    outline: none;
+    border-radius: 15px;
+    padding-left: 60px;
+    letter-spacing: 2px;
+    transition: all .5s ease-in-out;
+    font-size: 1rem;
+    color: #fff;
+  }
+  .input-search::placeholder{
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
+  button{
+    height: 50px;
+    width: 50px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #515b5e, #0e1538, #0e1538, #0e1f23);
+    cursor: pointer;
+    border-style: none;
+    outline: none;
+    border-radius: 15px;
+    color: #fff;
+    position: absolute;
+  } 
+  button:hover ~ .input-search{
+      width: 500px;
+      transition: all 500ms cubic-bezier(.58, 0.19, 1);
+  }
+  .input-search:hover{
+     width: 500px;
+      transition: all 500ms cubic-bezier(.58, 0.19, 1);
+  }
+  .info{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    bottom: 40%;
+    left: 8%;
+    z-index: 1;
+  }
+  .info span{
+    font-family: "hornsea";
+    font-size: 1.8rem;
+    line-height: 1.2;
+    filter: drop-shadow(0 0 .5rem black);
+    color: #fff;
+  }
+  .slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  .slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+  }
+  .slider-nav a:hover{
+    opacity: 1;
+  }
+  footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+  }
+  .caption {
+      display: block;
+      margin-top: 5px;
+    margin-bottom: 50px;
+      color: #999;
+      letter-spacing: 0.5px;
+  }
