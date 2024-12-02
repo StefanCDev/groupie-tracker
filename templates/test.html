@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <title>Groupie Tracker</title>
+</head>
+<body>
+  {{range .}}
+   <div class="container">
+    <div class="card">
+      <div class="front">
+        <img src="{{.Image}}" alt="" height="100%" width="100%">
+        <form action="/artist" method="POST">
+          <button type="submit">Read More</button>
+        </form>
+      </div>
+      <div class="back">
+        <div class="card-content">
+          <p>{{.Name}}</p>
+          <p>{{.LocationsUrl}}</p>
+        </div>
+      </div>
+    </div>
+   </div>
+  {{end}}
+</body>
+</html>
