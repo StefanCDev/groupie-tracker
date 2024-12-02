@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/fonts/hornsea_fc_regular-webfont.woff">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c5d615eb62.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <title>Home</title>
+</head>
+<body>
+  <header>
+    <h1>Groupie Tracker</h1>
+    <p>Stay connected with your favourite music Band/Artist.</p>
+  </header>
+  <div class="container">
+    <div class="slider-wrapper">
+        <form action="/artists/" method="POST" autocomplete="off">
+          <button type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+          <input type="text" name="search" class="input-search" required placeholder="Type to search..">
+        </form>
+      <!-- slider images -->
+      <div class="slider">
+        <div id="1" class="slide1"> </div>
+        <div id="2" class="slide2"> </div>
+        <div id="3" class="slide3"> </div>
+    </div>
+    <div class="info">
+          <span>Are you a music fan who loves staying up-to-date on your favorite artists and bands?<br>
+            With just a few simple clicks, you can track your favorite musicians and never miss a beat.
+          </span>
+    </div>
+    <!-- dots -->
+      <div class="slider-nav">
+        <a href="#1"></a>
+        <a href="#2"></a>
+        <a href="#3"></a>
+      </div>
+    </div>
+    <footer>
+      <small class="caption">Use the arrow keys or dots to navigate</small>
+      <p>    Copyright &copy; 2022 Mikel Cati @ 01Founders
+      </p>
+    </footer>
+</body>
+</html>
