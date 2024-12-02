@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/fonts/hornsea_fc_regular-webfont.woff">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c5d615eb62.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/static/css/output.css">
+  <title>Artist</title>
+</head>
+<body>
+  <div class="link">
+    <a href="/" class="homebtn">Home</a>
+  </div>
+      <div class="container">
+        <div class="content-section">
+          <div class="title">
+            <h1>{{.Name}}</h1>
+          </div>
+          <div class="grid-container">
+            <div class="grid-item">
+              <h3>First Album</h3>
+              <p>{{.FirstAlbum}}</p>
+            </div>
+            <div class="grid-item">
+              <h3>Creation Date</h3>
+              <p>{{.CreationDate}}</p>
+            </div>
+            <div class="grid-item">
+              <h3>Concert Dates</h3>
+              <ul>
+                {{range .ConcertDates}}
+                <li>{{.}}</li>
+              </ul>
+              {{end}}
+            </div>
+            <div class="grid-item">
+              <h3>Locations</h3>
+                <ul>
+                  {{range .Locations}}
+                  <li>{{.}}</li>
+                </ul>
+                {{end}}
+            </div>
+            <div class="grid-item">
+              <h3>Members</h3>
+              <ul>
+                {{range .Members}}
+                <li>{{.}}</li>
+              </ul>
+              {{end}}
+            </div>
+          </div>
+        </div>
+        <div class="image-section">
+          <img src="{{.Image}}" alt="" height="100%" width="100%">
+        </div>
+      </div>
+</body>
+</html>
